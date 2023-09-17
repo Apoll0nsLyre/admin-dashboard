@@ -1,7 +1,5 @@
 .header-main-page{
     box-sizing: border-box;
-    width: 100%;
-    height: fit-content;
     display: flex;
     flex-direction:column;
     padding: 20px;
