@@ -1,12 +1,10 @@
 .header-main-page{
-    box-sizing: border-box;
     display: flex;
     flex-direction:column;
     padding: 20px;
     background: white;
     box-shadow: 0px 0px 10px -2px #141313;
-    position: relative;
-
+    max-width: 100%;
 }
 .top-container{
     display: flex;
@@ -14,8 +12,19 @@
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
-.top-container i{
+.top-container form{
+    width: 100%;
+}
+.top-container .fa-bell{
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.top-container .fa-search{
     margin-bottom: auto;
     margin-top: auto;
     margin-left: 10px;
@@ -24,8 +33,8 @@
 .top-container i:hover{
     cursor: pointer;
 }
-.top-container form{
-    width: 150%;
+.search-container{
+    width: 100%;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -37,7 +46,6 @@
     border-radius: 50px;
     border: none;
     background:lightgrey;
-    
 }
 #searchbar:focus{
     outline: none;
@@ -53,11 +61,11 @@ h2.profile-name{
     border-radius: 50%;
 }
 .profile-container{
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     margin-right: 20px;
+    right: 0;
 }
 .profile-container *{
     margin-left: 10px;
@@ -70,13 +78,13 @@ h2.profile-name{
     cursor: pointer;
 }
 .profile-container .profile-name{
+    font-size: medium;
     margin-top: auto;
     margin-bottom: auto;
 }
 .profile-pic{
     margin-top: auto;
     margin-bottom: auto;
-    
 }
 .bottom-container{
     padding-top: 20px;
@@ -122,4 +130,59 @@ h2.profile-name{
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 5px;
+}
+
+@media screen and (max-width:600px){
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .top-container{
+        flex-direction: column;
+        margin: auto;
+    }
+    .top-container .fa-bell{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    .search-container{
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        width: 100%;
+    }
+    #searchbar{
+        width: 100%;
+    }
+    .profile-container{
+        justify-content: inherit;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .bottom-container{
+        justify-content: inherit;
+        flex-direction: column;
+    }
+    .button-container{
+        flex-direction: column;
+    }
+    .button-container .header-button{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .text-container{
+        justify-content: inherit;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:320px){
+    .profile-container .profile-pic{
+        display: none;
+    }
 }
